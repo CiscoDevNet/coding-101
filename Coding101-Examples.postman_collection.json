@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "65166836-5142-44ad-8949-a877071c7512",
+		"name": "Coding101-Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Deck of Cards",
+			"item": [
+				{
+					"name": "shuffle Deck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1",
+							"protocol": "https",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new",
+								"shuffle",
+								""
+							],
+							"query": [
+								{
+									"key": "deck_count",
+									"value": "1"
+								}
+							]
+						},
+						"description": "shuffle a deck, and return deck ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Draw cards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2",
+							"protocol": "https",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"<<deck_id>>",
+								"draw",
+								""
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DNA Center",
+			"item": [
+				{
+					"name": "Create token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Cisco123!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "devnetuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://sandboxdnac.cisco.com/api/system/v1/auth/token",
+							"protocol": "https",
+							"host": [
+								"sandboxdnac",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"api",
+								"system",
+								"v1",
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve List of Devices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YmQ5OGQzNWIyYmVhMDAwNGMzZWM5YmYiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViZDM2MzRiYjJiZWEwMDA0YzNlYmI1YSJdLCJ0ZW5hbnRJZCI6IjViZDM2MzRhYjJiZWEwMDA0YzNlYmI1OCIsImV4cCI6MTU1NTM1OTI3MCwidXNlcm5hbWUiOiJkZXZuZXR1c2VyIn0.zHFDdIZHE2yH5ftC9qhAy2q5Aaky_rC-7W-HGXoJLPY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://sandboxdnac.cisco.com/dna/intent/api/v1/network-device/",
+							"protocol": "https",
+							"host": [
+								"sandboxdnac",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"dna",
+								"intent",
+								"api",
+								"v1",
+								"network-device",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get network device info by IP Address",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YmQ5OGQzNWIyYmVhMDAwNGMzZWM5YmYiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViZDM2MzRiYjJiZWEwMDA0YzNlYmI1YSJdLCJ0ZW5hbnRJZCI6IjViZDM2MzRhYjJiZWEwMDA0YzNlYmI1OCIsImV4cCI6MTU1NTU0OTM1MiwidXNlcm5hbWUiOiJkZXZuZXR1c2VyIn0.vqGC1IHKPqJA3HgXAFd0T86elkr9EYmRo0b0zu7wxSY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://sandboxdnac.cisco.com/api/v1/network-device/ip-address/10.10.22.73",
+							"protocol": "https",
+							"host": [
+								"sandboxdnac",
+								"cisco",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"network-device",
+								"ip-address",
+								"10.10.22.73"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
