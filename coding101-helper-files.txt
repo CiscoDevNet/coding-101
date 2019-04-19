@@ -8,6 +8,12 @@ https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1
 
 https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2
 
+Things to Try
+  - what happens when you have a mistake?
+  wrong url
+  wrong deck id
+  letter instead of number
+
 *************************************************************************
 
 
@@ -39,7 +45,7 @@ Retrieve list of devices
  Headers:
  	x-auth-token  enter your token from Create token response
 
-Retrieve count of devices 
+Retrieve count of devices
  GET https://sandboxdnac.cisco.com/dna/intent/api/v1/network-device/count
  Headers:
  	x-auth-token  enter your token from Create token response
@@ -73,7 +79,7 @@ Handy commands
 	cd   change the working directory
 
 Clone the repos
-git clone git clone https://github.com/CiscoDevNet/coding-101.git
+git clone https://github.com/CiscoDevNet/coding-101.git
 
 Check status of files
 git status
@@ -81,4 +87,3 @@ git status
 
 
 ***************************************************************************
-
