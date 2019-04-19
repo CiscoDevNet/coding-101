@@ -87,3 +87,9 @@ git status
 
 
 ***************************************************************************
+
+Setup your local dev Environment
+https://developer.cisco.com/learning-labs/setup/
+
+Code Exchange Project for Python Samples
+https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/DNAC-Top5
