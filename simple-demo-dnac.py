@@ -14,7 +14,7 @@ url='https://sandboxdnac2.cisco.com/api/system/v1/auth/token'
 # Performs a POST on the specified url.
 result = requests.post(url=url, auth=HTTPBasicAuth("devnetuser", "Cisco123!"), verify=False)
 
-# get the token for use in future calls
+# get the token for use in future call
 token = result.json()["Token"]
 
 # prepare to use token in the header
@@ -31,4 +31,4 @@ devicelisturl='https://sandboxdnac2.cisco.com/dna/intent/api/v1/network-device'
 response = requests.get(url=devicelisturl, headers=headers, verify=False)
 
 # print the list of devices
-print(response.text)
+print(json.dumps(response.json(),indent=4))
